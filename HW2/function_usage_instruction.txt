@@ -1,0 +1,26 @@
+def hough_visualize(hough_img, lines);
+### visualize lines on hough_img
+
+def check_index(y, x, shape);
+### check whether (x,y) is a legal coordinate in image
+
+def gradient_img(bgr_img);
+### compute gradient image of bgr_img, including magnitude and orientation
+
+def filter_lines(lines, bgr_img, minGrad, maxOriDiff);
+### filter out the points on the line which are out the range of minGrad and maxOriDiff
+
+def detect_allpair_van(lines, bgr_img);
+### detect the vanishing points all pairs of line
+
+def length_2_index(length_van_points);
+### convert the length array to index array
+
+def filter_fake_van(inter_points, maxDis, minNum);
+### filter out the inter_points which are not in the group of size of minNum, within the distance of maxDis
+
+def num_cluster(centers, minDis);
+### comupte the real number of center based on the minimal distance of two centers
+
+def detect_van(inter_points, bgr_img, maxDis, minNum, maxDis_center)
+### use the function of filer_fake_van and draw the real vanishing points on bgr_img
